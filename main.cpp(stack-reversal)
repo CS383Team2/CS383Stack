@@ -12,8 +12,11 @@ using namespace std;
 
 #include "stack.h"
 
+void reverseString (int arr[]);
+
 main()
 {
+   int reverse[5];                                          // Holds reverse string of int's
    Stack iStack;
 
    cout << "Pushing integers onto iStack" << endl;
@@ -31,8 +34,9 @@ main()
    cout << endl << "Popping integers from iStack" << endl;
 
    while( !iStack.IsEmpty() )
-      cout << iStack.Pop() << ' ';
-
+   {
+      reverseString(reverse);
+   }
    cout << endl;
    iStack.Print();          // output the stack contents
 
@@ -43,4 +47,14 @@ main()
        cout << "The stack is not empty" << endl;
 
    return 0;
+}
+
+void reverseString (int arr[])
+{
+   int j;
+   for (j = 0; j < 5; j++)
+   {
+      reverse[j] = iStack.Pop();
+      cout << reverse[j] << ' ';
+   }
 }
