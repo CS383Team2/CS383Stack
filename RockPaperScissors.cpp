@@ -8,8 +8,10 @@ const int noChoices = 4;
 #define Rock     1
 #define Paper    2
 #define Scissors 3
+#define Unknown  4
 
 int whoWon(int p1, int p2);
+int parseResponce(char c);
 
 void LetsPlayRockPaperScissors(){
     Stack stackP1, stackP2;
@@ -36,7 +38,14 @@ void LetsPlayRockPaperScissors(){
 }
 
 int parseResponce(char c) {
-    
+    if (c == '1' || c == 'r')
+        return Rock;
+    else if (c == '2' || c == 'p')
+        return Paper;
+    else if (c == '3' || c == 's')
+        return Scissors;
+    else
+        return Unknown;
 }
 
 
