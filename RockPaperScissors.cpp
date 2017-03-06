@@ -16,6 +16,7 @@ int parseResponce(char c);
 void LetsPlayRockPaperScissors(){
     Stack stackP1, stackP2;
     int i, j; //loop control
+    int temp;
     char inChar;
     
     cout << "\n\nDo you want to play Rock Paper Scissors? (y/n): ";
@@ -33,7 +34,19 @@ void LetsPlayRockPaperScissors(){
         cout << "Choice #" << i << ": ";
         cin >> inChar;
         cout << endl;
-        stackP1.push(parseResponce(inChar))
+        temp = parseResponce(inChar);
+        if (temp == Unknown) {
+           cout << "Unknown response" << endl; 
+           return;
+        }
+        else {
+            stackP1.Push(temp);
+            cout << "You choose: " << temp << endl; 
+        }
+    }
+    
+    for (i = 0; i < noChoices; i++) {
+        cout << stackP1.Pop() << endl;
     }
 }
 
