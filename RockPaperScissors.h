@@ -1,3 +1,3 @@
 
 // prototypes
-int LetsPlayRockPaperScissors();
+void LetsPlayRockPaperScissors();
