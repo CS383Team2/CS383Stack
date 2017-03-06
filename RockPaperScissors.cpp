@@ -29,14 +29,14 @@ void LetsPlayRockPaperScissors(){
     cout << "\nRock \t\t1 or r" << endl;
     cout << "Paper \t\t2 or p" << endl;
     cout << "Scissors \t3 or s" << endl;
-    cout << "Player 1 input your " << noChoices << " choices. " << endl;
+    cout << "Player 1 input your " << noChoices << " choices." << endl;
     for (i = 0; i < noChoices; i++) {
         cout << "Choice #" << i << ": ";
         cin >> inChar;
         cout << endl;
         temp = parseResponce(inChar);
         if (temp == Unknown) {
-           cout << "Unknown response" << endl; 
+           cout << "Unknown response. Exiting game" << endl; 
            return;
         }
         else {
@@ -45,8 +45,28 @@ void LetsPlayRockPaperScissors(){
         }
     }
     
+    cout << "\nRock \t\t1 or r" << endl;
+    cout << "Paper \t\t2 or p" << endl;
+    cout << "Scissors \t3 or s" << endl;
+    cout << "Player 2 input your " << noChoices << " choices." << endl;
+    
     for (i = 0; i < noChoices; i++) {
-        cout << stackP1.Pop() << endl;
+        cout << "Choice #" << i << ": ";
+        cin >> inChar;
+        cout << endl;
+        temp = parseResponce(inChar);
+        if (temp == Unknown) {
+           cout << "Unknown response. Exiting game" << endl; 
+           return;
+        }
+        else {
+            stackP2.Push(temp);
+            cout << "You choose: " << temp << endl; 
+        }
+    }
+    
+    for (i = 0; i < noChoices; i++) {
+        cout << stackP1.Pop() << "\t\t" << stackP2.Pop()<< endl;
     }
 }
 
