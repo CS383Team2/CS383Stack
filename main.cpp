@@ -17,7 +17,7 @@ void reversePrint (int arr[]);
 
 main()
 {
-   reverse[5];
+   int reverse[5];
    
    Stack iStack;
 
