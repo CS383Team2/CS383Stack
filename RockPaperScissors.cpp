@@ -16,12 +16,12 @@ int parseResponce(char c);
 void LetsPlayRockPaperScissors(){
     Stack stackP1, stackP2;
     int i, j; //loop control
-    char response;
+    char inChar;
     
     cout << "\n\nDo you want to play Rock Paper Scissors? (y/n): ";
     //cin >> response;
-    response = 'y'; // force y for development
-    if (response != 'y')
+    inChar = 'y'; // force y for development
+    if (inChar != 'y')
         return;
     
     
@@ -31,9 +31,9 @@ void LetsPlayRockPaperScissors(){
     cout << "Player 1 input your " << noChoices << " choices. " << endl;
     for (i = 0; i < noChoices; i++) {
         cout << "Choice #" << i << ": ";
-        cin >> response;
+        cin >> inChar;
         cout << endl;
-        stackP1.push(parseResponce(response))
+        stackP1.push(parseResponce(inChar))
     }
 }
 
