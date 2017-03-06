@@ -11,6 +11,7 @@
 using namespace std;
 
 #include "stack.h"
+#include "RockPaperScissors.h"
 
 main()
 {
@@ -42,5 +43,6 @@ main()
    else
        cout << "The stack is not empty" << endl;
 
+   LetsPlayRockPaperScissors();
    return 0;
 }

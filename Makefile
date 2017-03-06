@@ -7,7 +7,7 @@ CFLAGS=
 
 SRCS=	main.cpp stack.cpp linkedList.cpp
 
-OBJS=	main.o stack.o linkedList.o
+OBJS=	main.o stack.o linkedList.o RockPaperScissors.o
 
 #name of program executable
 TARGET=main
@@ -25,6 +25,9 @@ stack.o:	stack.cpp stack.h linkedList.h
 
 linkList.o:	linkedList.cpp linkedList.h
 	$(CC) -c linkedList.cpp
+
+RockPaperScissors.o: RockPaperScissors.h RockPaperScissors.cpp stack.o
+	$(CC) -c RockPaperScissors.cpp
 
 # This removes target and all .o files
 clean::
