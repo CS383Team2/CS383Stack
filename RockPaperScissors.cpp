@@ -27,10 +27,17 @@ int parseResponse(char c);
 void LetsPlayRockPaperScissors(){
     Stack stackP1, stackP2;
     int i; //loop control
-    int p1_choice, p2_choice;
+    int p1_choice, p2_choice, result, p1_wins = 0, p2_wins = 0;
     char inChar;
     
-    cout << "\n\nDo you want to play Rock Paper Scissors? (y/n): ";
+    cout << "\n\nThis is a simple 2 player game of Rock, Paper, Scissors."
+         << "\nThe rules are that Rock beats Scissors, Scissors"
+         << "\nbeat Paper, and Paper beats Rock. To play each"
+         << "\nperson will start by selecting their choices for"
+         << "\nfive rounds. Then the computer will compare the"
+         << "\nthe players' choices and print out who won each"
+         << "\nround and then who won best out of 5."
+         << "\n\nDo you want to play Rock Paper Scissors? (y/n): ";
     cin >> inChar;
     //inChar = 'y'; // force y for development
     if (inChar != 'y')
@@ -84,8 +91,20 @@ void LetsPlayRockPaperScissors(){
         p2_choice = stackP2.Pop();
         cout << "P1 choice: " << p1_choice <<
                 ". P2 choice: " << p2_choice << " ";
-        whoWon(p1_choice, p2_choice);
+        result = whoWon(p1_choice, p2_choice);
+        if (result == 1)
+            ++p1_wins;
+        if (result == 2)
+            ++p2_wins;
     }
+    cout << "=========================" << endl;
+    if (p1_wins > p2_wins)
+        cout << "Player 1 wins the match!" << endl;
+    else if (p2_wins > p1_wins)
+        cout << "Player 2 wins the match!" << endl;
+    else
+        cout << "It's a tied match!" << endl;
+    cout << "=========================" << endl;
 }
 
 // Thought this would be longer :)
