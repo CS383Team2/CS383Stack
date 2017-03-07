@@ -1,0 +1,12 @@
+language: cpp
+
+git:
+  depth: 10
+
+compiler:
+  - clang
+  - gcc
+ 
+script:
+  - mkdir build
+  - make
