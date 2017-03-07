@@ -1,0 +1,15 @@
+language: cpp
+
+git:
+  depth: 5
+
+compiler:
+  - clang
+  - gcc ## Uncomment when we are up to full c++11 standards.
+ 
+script:
+  - mkdir build
+  #- cd build
+  #- cmake ../ -DSCRIPTS=1 -DTOOLS=1
+ # - make -j8
+  - make
