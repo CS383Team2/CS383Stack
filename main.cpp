@@ -18,14 +18,15 @@ void reversePrint (int arr[]);
 main()
 {
    int reverse[5];
+   int i;
    
    Stack iStack;
 
    cout << "Pushing integers onto iStack" << endl;
 
-   for( int i = 0 ; i < 5 ; i++ ) {
+   for( i = 0 ; i < 5 ; i++ ) {
       iStack.Push(i);       // push items onto the stack
-      reverse[i++] = i;
+      reverse[i] = i;
       cout << i << ' ';
    }
    cout << endl;
