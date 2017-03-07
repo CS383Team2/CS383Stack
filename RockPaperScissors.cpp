@@ -22,7 +22,7 @@ using namespace std;
 const int noChoices = 5;
 
 int whoWon(int p1, int p2);
-int parseResponce(char c);
+int parseResponse(char c);
 
 void LetsPlayRockPaperScissors(){
     Stack stackP1, stackP2;
@@ -44,7 +44,7 @@ void LetsPlayRockPaperScissors(){
     for (i = 0; i < noChoices; i++) {
         cout << "Choice #" << i << ": ";
         cin >> inChar;
-        p1_choice = parseResponce(inChar);
+        p1_choice = parseResponse(inChar);
         if (p1_choice == Unknown) {
            cout << "Unknown response. Exiting game" << endl; 
            return;
@@ -63,7 +63,7 @@ void LetsPlayRockPaperScissors(){
     for (i = 0; i < noChoices; i++) {
         cout << "Choice #" << i << ": ";
         cin >> inChar;
-        p2_choice = parseResponce(inChar);
+        p2_choice = parseResponse(inChar);
         if (p2_choice == Unknown) {
            cout << "Unknown response. Exiting game" << endl; 
            return;
@@ -89,7 +89,7 @@ void LetsPlayRockPaperScissors(){
 }
 
 // Thought this would be longer :)
-int parseResponce(char c) {
+int parseResponse(char c) {
     if (c == '1' || c == 'r')
         return Rock;
     else if (c == '2' || c == 'p')
