@@ -17,14 +17,14 @@ void reversePrint (int arr[]);
 
 main()
 {
-   int reverse[5];
+   int reverse[6];
    int i;
    
    Stack iStack;
 
    cout << "Pushing integers onto iStack" << endl;
 
-   for( i = 0 ; i < 5 ; i++ ) {
+   for( i = 0 ; i < 6 ; i++ ) { //added another value, dream big -Paul
       iStack.Push(i);       // push items onto the stack
       reverse[i] = i;
       cout << i << ' ';
@@ -48,8 +48,8 @@ main()
        cout << "The stack is empty" << endl;
    else
        cout << "The stack is not empty" << endl;
-   
-   reversePrint (&reverse);
+   //reversePrint (&reverse);
+   reversePrint (reverse); //fixed by Paul, you hade an extra & operator before reverse
    LetsPlayRockPaperScissors();
    return 0;
 }
