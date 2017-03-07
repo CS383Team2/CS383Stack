@@ -59,7 +59,7 @@ void reversePrint (int arr[])
    cout << "The reverse stack order is:" << endl;
    int z;
    
-   for (z = 0; z < 5; z++)
+   for (z = 0; z < 6; z++)
    {
       cout << arr[z] << ' ';
    }
